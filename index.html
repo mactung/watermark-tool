@@ -6,19 +6,28 @@
         <title>Document</title>
     </head>
     <style>
+        .container {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+        }
         input {
             border: 1px solid #f0f0f0;
+            padding: 8px;
+            margin-bottom: 32px;
         }
-        .canvas-warpper {
-            text-align: center;
+        .canvas {
+            margin: 0 auto;
         }
     </style>
     <body>
-        <div>
-            <input id="file-input" type="file" />
-        </div>
-        <div class="canvas-wrapper">
-            <canvas id="canvas"></canvas>
+        <div class="container">
+            <div>
+                <input id="file-input" type="file" />
+            </div>
+            <div class="canvas-wrapper">
+                <canvas class="canvas" id="canvas"></canvas>
+            </div>
         </div>
     </body>
     <script src="script.js"></script>
