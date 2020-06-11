@@ -10,8 +10,8 @@ fileInput.addEventListener('change', function () {
         const img = new Image();
         img.src = evt.target.result;
         img.onload = function () {
-            canvas.width = window.innerWidth;
-            canvas.height = img.height * (window.innerWidth / img.width);
+            canvas.height = window.innerHeight;
+            canvas.width = img.width * (window.innerHeight / img.height);
             ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
             drawLogo();
         };
@@ -27,8 +27,8 @@ function drawLogo() {
             logoImg,
             20,
             20,
-            canvas.width / 3.5,
-            logoImg.height * (canvas.width / 3.5 / logoImg.width)
+            canvas.width / 3,
+            logoImg.height * (canvas.width / 3 / logoImg.width)
         );
     };
 }
